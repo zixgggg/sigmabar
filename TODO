@@ -1,8 +1,8 @@
 todo:
 	use ewmh lib to fetch x11 info
 	use dpg to make bar:
-		font,size,color,chinese(or other language)
-		background color
+		size,color,background color
 done:	
 	use configparser to manage config
 	use subprocess to excute cmd (subprocess.check_output(cmd,shell=True).decode("utf-8").strip())
+	bar font suppurt english,chinese,japanese,korean,cyrillic,othor font(like nerd fonts)
