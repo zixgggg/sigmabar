@@ -5,4 +5,4 @@ todo:
 done:	
 	use configparser to manage config
 	use subprocess to excute cmd (subprocess.check_output(cmd,shell=True).decode("utf-8").strip())
-	bar font suppurt english,chinese,japanese,korean,cyrillic,othor font(like nerd fonts)
+	bar font suppurt english,chinese,japanese,korean,cyrillic,othor font(like nerd fonts)(ai help a lot lol)
