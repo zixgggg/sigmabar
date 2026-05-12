@@ -1,7 +1,7 @@
 todo:
 	use ewmh lib to fetch x11 info
 	use dpg to make bar:
-		size,color,background color
+		size,font color(dpg.mvThemeCol_Text),background color(dpg.mvThemeCol_WindowBg),style(dpg.mvStyleVar_WindowPadding)
 done:	
 	use configparser to manage config
 	use subprocess to excute cmd (subprocess.check_output(cmd,shell=True).decode("utf-8").strip())
