@@ -12,7 +12,7 @@ with dpg.window(tag="win"):
         dpg.add_text(all_cmd,tag="all_cmd_tag")
         #dpg.add_spacer(width=20)
         #dpg.add_text(i,tag="cpu_tag")
-i=1
+
 for block in config.sections():#取得所有區塊的特定區塊
     cmd_to_run = config.get(block, "command", fallback="")
     cmd_label=config.get(block,"label",fallback="")
@@ -32,16 +32,10 @@ for block in config.sections():#取得所有區塊的特定區塊
         for key in keys:
             value=config[block][key]#取得特定鍵下的值
     """
-    if i!=len(config.sections()):
-        if i==1 and cmd_to_run=="":
-            all_cmd=all_cmd+cmd_label+cmd
-        else:
-            all_cmd=all_cmd+cmd_label+cmd+bar_split_sign
-        i=i+1
-    else:
-        #if i==len(config.sections()):
+    if cmd_to_run=="":
         all_cmd=all_cmd+cmd_label+cmd
-        
+    else:
+        all_cmd=all_cmd+cmd_label+cmd+" | "
 if(text_font!=""):
     with dpg.font_registry():
         with dpg.font(text_font, int(text_size)) as text_font_id:
