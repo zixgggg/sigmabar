@@ -12,7 +12,7 @@ with dpg.window(tag="win"):
         dpg.add_text(all_cmd,tag="all_cmd_tag")
         #dpg.add_spacer(width=20)
         #dpg.add_text(i,tag="cpu_tag")
-
+i=1
 for block in config.sections():#取得所有區塊的特定區塊
     cmd_to_run = config.get(block, "command", fallback="")
     cmd_label=config.get(block,"label",fallback="")
@@ -25,10 +25,6 @@ for block in config.sections():#取得所有區塊的特定區塊
     text_size=int(config.get("sigma_bar","font_size",fallback=20))
     #cmd=subprocess.check_output(config[block]["command"],shell=True).decode("utf-8").strip()
     cmd=subprocess.check_output(cmd_to_run,shell=True).decode("utf-8").strip()
-    with dpg.theme() as global_theme:
-        with dpg.theme_component(dpg.mvAll):
-            dpg.add_theme_color(dpg.mvThemeCol_FrameBg,value=(0,147,0),category=dpg.mvThemeCat_Core)
-    dpg.bind_theme(global_theme) 
     """
     取得所有區塊的所有值：
     for block in config.sections():#取得所有區塊的特定區塊
@@ -36,10 +32,16 @@ for block in config.sections():#取得所有區塊的特定區塊
         for key in keys:
             value=config[block][key]#取得特定鍵下的值
     """
-    if cmd_to_run=="":
-        all_cmd=all_cmd+cmd_label+cmd
+    if i!=len(config.sections()):
+        if i==1 and cmd_to_run=="":
+            all_cmd=all_cmd+cmd_label+cmd
+        else:
+            all_cmd=all_cmd+cmd_label+cmd+bar_split_sign
+        i=i+1
     else:
-        all_cmd=all_cmd+cmd_label+cmd+" | "
+        #if i==len(config.sections()):
+        all_cmd=all_cmd+cmd_label+cmd
+        
 if(text_font!=""):
     with dpg.font_registry():
         with dpg.font(text_font, int(text_size)) as text_font_id:
