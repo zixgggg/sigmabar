@@ -6,4 +6,5 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "dearpygui>=2.2",
+    "ewmhlib>=0.2",
 ]
