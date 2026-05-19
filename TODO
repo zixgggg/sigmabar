@@ -1,6 +1,7 @@
 todo:
-	use ewmh lib to fetch x11 info
-	make buttom display virtual desktop number like i3bar ,switch by mouse wheel and click
+	use ewmh lib to fetch x11 info:
+		make sigma bar become a dock
+		make buttom display virtual desktop number like i3bar ,switch by mouse wheel and click
 done:	
 	use configparser to manage config
 	use subprocess to excute cmd (subprocess.check_output(cmd,shell=True).decode("utf-8").strip())
