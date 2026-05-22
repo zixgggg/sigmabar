@@ -21,10 +21,16 @@ bar_y=int(config.get("sigma_bar","y",fallback=0))
 bar_split_sign=config.get("sigma_bar","split_sign",fallback="   |   ")
 text_font=config.get("sigma_bar","font",fallback="")
 text_size=int(config.get("sigma_bar","font_size",fallback=20))
+background_color_r=int(config.get("sigma_bar","background_color_r",fallback=0))
+background_color_g=int(config.get("sigma_bar","background_color_g",fallback=0))
+background_color_b=int(config.get("sigma_bar","background_color_b",fallback=0))
+text_color_r=int(config.get("sigma_bar","text_color_r",fallback=255))
+text_color_g=int(config.get("sigma_bar","text_color_g",fallback=255))
+text_color_b=int(config.get("sigma_bar","text_color_b",fallback=255))
 with dpg.theme() as global_theme:
     with dpg.theme_component(dpg.mvAll):
-        dpg.add_theme_color(dpg.mvThemeCol_WindowBg,value=(0,147,0),category=dpg.mvThemeCat_Core)
-        dpg.add_theme_color(dpg.mvThemeCol_Text,value=(0,0,0),category=dpg.mvThemeCat_Core)
+        dpg.add_theme_color(dpg.mvThemeCol_WindowBg,value=(background_color_r,background_color_g,background_color_b),category=dpg.mvThemeCat_Core)#background color
+        dpg.add_theme_color(dpg.mvThemeCol_Text,value=(text_color_r,text_color_g,text_color_b),category=dpg.mvThemeCat_Core)#text color
         dpg.add_theme_style(dpg.mvStyleVar_WindowPadding,x=0,y=0)
 dpg.bind_theme(global_theme)
 if(text_font!=""):
