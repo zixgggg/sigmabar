@@ -5,7 +5,7 @@ import configparser
 import ewmh_thing
 dpg.create_context()
 config = configparser.ConfigParser()
-config.read("config.ini")
+config.read("~/.config/sigma_bar/config.ini")
 all_cmd_output=""
 
 with dpg.window(tag="win"):
