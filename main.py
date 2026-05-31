@@ -2,7 +2,7 @@ import dearpygui.dearpygui as dpg
 import subprocess
 import time
 import configparser
-
+import ewmh_thing
 dpg.create_context()
 config = configparser.ConfigParser()
 config.read("config.ini")
@@ -49,9 +49,10 @@ else:
     pass
 
 dpg.set_primary_window("win", True)
-dpg.create_viewport(title="sigma_bar",resizable=False,x_pos=bar_x,y_pos=bar_y,width=bar_width,height=bar_height,decorated=False,always_on_top=True,disable_close=True)
+dpg.create_viewport(title="sigma_bar",resizable=False,width=bar_width,height=bar_height,decorated=False,always_on_top=True,disable_close=True)#x_pos=bar_x,y_pos=bar_y
 dpg.setup_dearpygui()
 dpg.show_viewport()
+ewmh_thing.set_dock()
 while dpg.is_dearpygui_running():
     for block in config.sections():#取得所有區塊的特定區塊
         cmd_to_run = config.get(block, "command", fallback="")
