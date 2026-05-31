@@ -3,6 +3,7 @@ todo:
 		make buttom display virtual desktop number like i3bar ,switch by mouse wheel and click
 		make buttom control volume
 	don't show split sign at text last 
+	pack sigma_bar to executable file
 done:	
 	use configparser to manage config
 	use subprocess to excute cmd (subprocess.check_output(cmd,shell=True).decode("utf-8").strip())
