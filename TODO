@@ -2,6 +2,7 @@ todo:
 	use ewmh lib to fetch x11 info:
 		make buttom display virtual desktop number like i3bar ,switch by mouse wheel and click
 		make buttom control volume
+	don't show split sign at text last 
 done:	
 	use configparser to manage config
 	use subprocess to excute cmd (subprocess.check_output(cmd,shell=True).decode("utf-8").strip())
