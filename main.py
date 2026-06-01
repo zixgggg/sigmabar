@@ -72,7 +72,7 @@ while dpg.is_dearpygui_running():
             all_cmd_output=all_cmd_output+cmd_label+cmd+bar_split_sign
     dpg.set_value("all_cmd_tag",all_cmd_output)
     all_cmd_output=""
-    #print("[sigma_bar] this will run every frame")
+    #print("[sigmabar] this will run every frame")
     dpg.render_dearpygui_frame()
     time.sleep(update_gird)
 #dpg.start_dearpygui()
