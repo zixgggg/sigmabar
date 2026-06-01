@@ -1,3 +1,4 @@
+#!/usr/bin/bash
 git clone https://github.com/zixgggg/sigmabar.git
 cd sigmabar/
 cp sigmabar $HOME/.local/bin
