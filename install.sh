@@ -1,3 +1,6 @@
-mv sigmabar $HOME/.local/bin
-mkdir $HOME/.config/sigma_bar/
-mv config.ini $HOME/.config/sigma_bar/
+git clone https://github.com/zixgggg/sigmabar.git
+cd sigmabar/
+cp sigmabar $HOME/.local/bin
+mkdir $HOME/.config/sigmabar/
+cp config.ini $HOME/.config/sigmabar/
+echo "install complete,repository can delete"
