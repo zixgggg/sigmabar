@@ -3,9 +3,12 @@ import subprocess
 import time
 import configparser
 import ewmh_thing
+from pathlib import Path
 dpg.create_context()
 config = configparser.ConfigParser()
-config.read("~/.config/sigma_bar/config.ini")
+config_path=str(Path.home())+"/.config/sigmabar/config.ini"
+config.read(config_path)
+print(f"config.read():{config.read(config_path)}")
 all_cmd_output=""
 
 with dpg.window(tag="win"):
