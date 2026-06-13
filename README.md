@@ -2,16 +2,16 @@
 
 ##installtion
 General funtion(install,uninstall,more actions)
-"""bash
+```bash
 curl -fsSL https://raw.githubusercontent.com/zixgggg/sigmabar/refs/heads/main/menu.sh|bash
-"""
+```
 
 just install
-"""bash
+```bash
 curl -fsSL https://raw.githubusercontent.com/zixgggg/sigmabar/refs/heads/main/install.sh|bash
-"""
+```
 
 uninstall
-"""bash
+```bash
 curl -fsSL https://raw.githubusercontent.com/zixgggg/sigmabar/refs/heads/main/uninstall.sh|bash
-"""
+```
