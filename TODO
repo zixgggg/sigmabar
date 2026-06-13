@@ -2,9 +2,6 @@ todo:
 	use ewmh lib to fetch x11 info:
 		make buttom display virtual desktop number like i3bar ,switch by mouse wheel and click
 		make buttom control volume
-	don't show split sign at text last 
-	pack sigma_bar to executable file
-	make a menu.sh choose install,uninstall or others actions
 done:	
 	use configparser to manage config
 	use subprocess to excute cmd (subprocess.check_output(cmd,shell=True).decode("utf-8").strip())
@@ -12,3 +9,6 @@ done:
 	use dpg to make bar:
 		size,font color(dpg.mvThemeCol_Text),background color(dpg.mvThemeCol_WindowBg),style(dpg.mvStyleVar_WindowPadding)
 	make sigma bar become a dock
+	make a menu.sh choose install,uninstall or others actions
+	don't show split sign at text last 
+	pack sigma_bar to executable file
