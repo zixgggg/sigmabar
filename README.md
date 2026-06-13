@@ -1,6 +1,6 @@
 # sigmabar
 
-##installtion
+## installtion
 General funtion(install,uninstall,more actions)
 ```bash
 curl -fsSL https://raw.githubusercontent.com/zixgggg/sigmabar/refs/heads/main/menu.sh|bash
