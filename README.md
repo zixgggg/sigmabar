@@ -32,6 +32,7 @@ example:
 <br>
 ```width=1920```
 <br>
+<br>
 ```height```
 <br>
 set bar height
@@ -41,4 +42,5 @@ set bar height
 example:
 <br>
 ```height=20```
+<br>
 <br>
