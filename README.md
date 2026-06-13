@@ -22,6 +22,7 @@ config file at ```~/.config/sigmabar/config.ini```
 <br>
 all config:
 <br>
+<br>
 ```width```
 <br>
 set bar width
