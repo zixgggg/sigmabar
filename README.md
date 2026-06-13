@@ -19,18 +19,26 @@ curl -fsSL https://raw.githubusercontent.com/zixgggg/sigmabar/refs/heads/main/un
 ## configtion
 config file at ```~/.config/sigmabar/config.ini```
 *default* mean if config.ini has no that key, program will use a hardcode value inside
-
-
+<br>
 all config:
-
+<br>
 ```width```
+<br>
 set bar width
+<br>
 *default:1920*
+<br>
 example:
+<br>
 ```width=1920```
-
+<br>
 ```height```
+<br>
 set bar height
+<br>
 *default:30*
+<br>
 example:
+<br>
 ```height=20```
+<br>
