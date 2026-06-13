@@ -76,7 +76,10 @@ dpg.setup_dearpygui()
 dpg.show_viewport()
 ewmh_thing.set_dock()
 while dpg.is_dearpygui_running():
+    blocks_output_list=[]
     for block in config.sections():#取得所有區塊的特定區塊
+        if block == "sigma_bar":
+            continue
         cmd_to_run = config.get(block, "command", fallback="")
         cmd_label=config.get(block,"label",fallback="")
         #cmd=subprocess.check_output(config[block]["command"],shell=True).decode("utf-8").strip()
@@ -88,13 +91,16 @@ while dpg.is_dearpygui_running():
             for key in keys:
                 value=config[block][key]#取得特定鍵下的值
         """
-        if cmd_to_run=="":
-            all_cmd_output=all_cmd_output+cmd_label+cmd
-        else:
-            all_cmd_output=all_cmd_output+cmd_label+cmd+bar_split_sign
+        if cmd_to_run!="":
+            cmd = subprocess.check_output(cmd_to_run, shell=True).decode("utf-8").strip()
+            blocks_output_list.append(cmd_label+cmd)
+        elif cmd_label!="":
+            blocks_output_list.append(cmd_label)
+    all_cmd_output = bar_split_sign.join(blocks_output_list)
+        
     dpg.set_value("all_cmd_tag",all_cmd_output)
     all_cmd_output=""
-    #print("[sigmabar] this will run every frame")
+    #print("[sigmabar] this will run every update_grid")
     dpg.render_dearpygui_frame()
     time.sleep(update_gird)
 #dpg.start_dearpygui()
